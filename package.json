@@ -1,22 +1,22 @@
 {
-  "name": "koishi-plugin-elysia-ai",
-  "description": "\u0016\u0016\u0016An AI agent framework designed under the bionic-inspired concept.",
-  "version": "0.0.1",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
-  "files": [
-    "lib",
-    "dist"
+  "name": "elysia-ai",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "yarn@4.7.0",
+  "workspaces": [
+    "packages/core",
+    "packages/runtime",
+    "packages/body"
   ],
-  "license": "MIT",
-  "scripts": {},
-  "keywords": [
-    "chatbot",
-    "koishi",
-    "plugin"
-  ],
-  "devDependencies": {},
-  "peerDependencies": {
-    "koishi": "^4.18.7"
-  }
-}
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0",
+    "vitest": "^1.6.0"
+  },
+  "license": "AGPL-3.0-or-later"
+}\n
