@@ -20,11 +20,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PinkElysiaDev/Elysia.A.I..git"
+    "url": "https://github.com/PinkElysiaDev/elysia-ai.git"
   },
-  "homepage": "https://github.com/PinkElysiaDev/Elysia.A.I.",
+  "homepage": "https://github.com/PinkElysiaDev/elysia-ai",
   "bugs": {
-    "url": "https://github.com/PinkElysiaDev/Elysia.A.I./issues"
+    "url": "https://github.com/PinkElysiaDev/elysia-ai/issues"
   },
   "author": "PinkElysiaDev",
   "devDependencies": {
