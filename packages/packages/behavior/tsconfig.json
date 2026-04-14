@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": "../../../../../tsconfig",
   "compilerOptions": {
     "rootDir": "src",
     "outDir": "lib"
@@ -12,7 +12,7 @@
       "path": "../core"
     },
     {
-      "path": "../runtime"
+      "path": "../../elysia-ai-runtime"
     }
   ]
 }
