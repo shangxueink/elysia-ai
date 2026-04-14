@@ -37,7 +37,7 @@ function collectElysiaPackageMappings() {
       if (!fs.existsSync(packageJsonPath)) return null
 
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))
-      if (!packageJson.name?.startsWith('@elysia-ai/')) return null
+      if (!packageJson.name?.startsWith('@elysia-ai/koishi-plugin-')) return null
 
       return {
         name: packageJson.name,
@@ -97,7 +97,7 @@ function upsertElysiaPaths(tsconfigContent, mappings) {
   const before = match[1]
   const between = match[2]
   const after = match[3]
-  const cleanedBetween = between.replace(/\s*"@elysia-ai\/[^"]+": \[\s*[\s\S]*?\s*\],\n?/g, '')
+  const cleanedBetween = between.replace(/\s*"@elysia-ai\/koishi-plugin-[^"]+": \[\s*[\s\S]*?\s*\],\n?/g, '')
 
   return tsconfigContent.replace(
     sectionPattern,
@@ -130,7 +130,7 @@ function patchTsConfig() {
 
     const mappings = collectElysiaPackageMappings()
     if (!mappings.length) {
-      console.log('ℹ️ 未发现 @elysia-ai 子包，跳过路径映射补丁')
+      console.log('ℹ️ 未发现 @elysia-ai/koishi-plugin-* 子包，跳过路径映射补丁')
       return
     }
 
@@ -146,7 +146,7 @@ function patchTsConfig() {
     fs.writeFileSync(rootTsConfigPath, nextContent, 'utf8')
 
     console.log('✅ 成功更新 tsconfig.json')
-    console.log('📋 已同步 @elysia-ai 工作区路径映射')
+    console.log('📋 已同步 @elysia-ai/koishi-plugin-* 工作区路径映射')
   } catch (error) {
     console.error('❌ 更新 tsconfig.json 时出错:', error.message)
     process.exit(1)

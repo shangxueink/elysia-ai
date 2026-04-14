@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "name": "@elysia-ai/brain",
+  "name": "@elysia-ai/koishi-plugin-brain",
   "main": "lib/index.js",
   "type": "module",
   "types": "lib/index.d.ts",
@@ -24,5 +24,12 @@
       "import": "./lib/index.js"
     },
     "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "koishi": "^4.18.0"
+  },
+  "devDependencies": {
+    "koishi": "^4.18.0",
+    "typescript": "^5.0.0"
   }
 }

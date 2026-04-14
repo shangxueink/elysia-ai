@@ -1,5 +1,5 @@
 {
-  "name": "@elysia-ai/core",
+  "name": "@elysia-ai/koishi-plugin-core",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -27,6 +27,9 @@
     "url": "https://github.com/PinkElysiaDev/elysia-ai/issues"
   },
   "author": "PinkElysiaDev",
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
   "devDependencies": {
     "typescript": "^5.0.0"
   },

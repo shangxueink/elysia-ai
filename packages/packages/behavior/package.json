@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "name": "@elysia-ai/behavior",
+  "name": "@elysia-ai/koishi-plugin-behavior",
   "main": "lib/index.js",
   "type": "module",
   "types": "lib/index.d.ts",
