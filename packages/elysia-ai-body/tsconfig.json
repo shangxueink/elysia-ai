@@ -9,7 +9,7 @@
   ],
   "references": [
     {
-      "path": "../packages/core"
+      "path": "../@elysia-ai/core"
     },
     {
       "path": "../elysia-ai-runtime"

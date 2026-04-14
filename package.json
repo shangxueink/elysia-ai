@@ -6,7 +6,7 @@
   "license": "AGPL-3.0-or-later",
   "workspaces": [
     "packages/*",
-    "packages/packages/*"
+    "packages/@elysia-ai/*"
   ],
   "scripts": {
     "postinstall": "node scripts/patch-tsconfig.js",
