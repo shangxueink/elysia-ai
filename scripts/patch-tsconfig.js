@@ -50,7 +50,7 @@ function patchTsConfig() {
       return
     }
 
-    const koishiPluginPattern = /("koishi-plugin-\\*": \\[\\s*)([^\\]]+?)(\\s*\\]\\s*,)/
+    const koishiPluginPattern = /("koishi-plugin-\*": \[\s*)([^\]]+?)(\s*\]\s*,)/
     const match = tsconfigContent.match(koishiPluginPattern)
 
     if (!match) {
@@ -62,7 +62,7 @@ function patchTsConfig() {
     const existingPaths = match[2]
     const suffix = match[3]
 
-    const cleanExistingPaths = existingPaths.trim().replace(/,\\s*$/, '')
+    const cleanExistingPaths = existingPaths.trim().replace(/,\s*$/, '')
     const updatedPaths = cleanExistingPaths + ',\n        "' + newPath + '"'
 
     const newContent = tsconfigContent.replace(
